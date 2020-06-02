@@ -1,0 +1,73 @@
+.upcoming-events {
+    background-color: #540d6e;
+    //height: 320px;
+    color: #ffffff;//optional display: flex,  flex-direction: column; & justify-content: space-around;
+    align-items: center;
+    padding:  30px;
+    .title {
+        margin-top: 30px;
+        height: 35px;
+        width: 392px;
+        border-bottom: solid 2px #ffffff;
+        padding-bottom: 40px;
+        
+        h1 {
+            font-family: "GillScans";
+        }
+    }
+    .events {
+        
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        .event {
+            padding: 20px;
+            width: 210px;
+            //height: 100%;
+            height: 124px;
+            display: flex;
+            justify-content: space-between;
+                .date {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #ee4367;
+                    display: flex;
+                    flex-direction: space-between;
+                } 
+                .event-detail {
+                    width:140px;
+                    font-family: "GillSansReg";
+                    font-size: 12px;
+                    .highlight {
+                        color: white;
+                    }
+                     .details {
+                         color:#ee4367;
+                     }
+                }
+        }
+    }
+
+}    
+//media querries adapt to screen height & width
+@media (max-width: 980px) {
+    .upcoming-events {
+        flex-wrap: wrap;//if you wantit t in a column as t hte site gets smaller
+        width: 100%;
+        margin: top left auto;
+        padding: 80px;
+     
+        .events {
+            flex-direction: column;//if you wantit t in a column as t hte site gets smaller
+            width: 110px;
+            margin: top left auto;
+            padding: 80px;
+            .event { 
+                flex-direction: column;//if you wantit t in a column as t hte site gets smaller
+                width: 100px;
+                margin: top left auto;
+                padding: 100px;
+            }
+        }
+    }
+}
